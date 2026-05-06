@@ -25,3 +25,17 @@ echo "password: your_password" > _config.yml
 - Name: MKDOCS_PASSWORD, Value: your chosen password
 - Save, then re-run the CI workflow (or push a commit to trigger it)
 After the redeploy the site will prompt for the password.
+
+
+## Run mkdocs 
+
+### Locally
+```bash
+mkdocs serve
+```
+
+### Deploy to GitHub Pages
+```bash
+
+mkdocs gh-deploy --force
+```

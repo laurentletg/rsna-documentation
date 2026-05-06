@@ -98,7 +98,7 @@ plugins:
       encryption_info_message: ''
       password_inventory:
         staff:
-          - !ENV MKDOCS_PASSWORD
+          - !ENV [MKDOCS_PASSWORD, '']
       remember_password: true
 
 copyright: |
