@@ -1,27 +1,22 @@
-# Homepage
+# Létourneau-Guillon Lab
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Welcome to the internal wiki of the Létourneau-Guillon research lab at the CRCHUM, Université de Montréal.
 
-## Commands
+Our work focuses on **neuroradiology AI** and **medical image segmentation**, with a particular interest in intracranial hemorrhage and stroke imaging.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+---
 
-## Project layout
+## Quick links
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+| | |
+|---|---|
+| :material-account-group: [Team](team.md) | Meet the lab members |
+| :material-flask: [Research](research.md) | Ongoing projects and publications |
+| :material-book-open-variant: [Resources](resources/index.md) | Learning resources by topic |
+| :material-clipboard-check: [Onboarding](onboarding.md) | Getting started at the CRCHUM |
+| :material-email: [Contact](contact.md) | How to reach us |
 
+---
 
-### Code for a specific language
-
-Some more code with the `py` at the start:
-
-``` py
-import pandas as pd
-```
-
+!!! tip "New to the lab?"
+    Start with the [Onboarding](onboarding.md) page, then explore [Resources](resources/index.md).

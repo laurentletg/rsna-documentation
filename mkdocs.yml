@@ -1,45 +1,69 @@
-site_name: RSNA Documentation
+site_name: Létourneau-Guillon Lab
+site_description: Internal wiki for the Létourneau-Guillon research lab — neuroradiology AI & medical imaging.
+site_author: Létourneau-Guillon Lab
+site_url: https://anw1998.github.io/rsna-documentation/
+
+repo_name: rsna-documentation
+repo_url: https://github.com/anw1998/rsna-documentation
+
 theme:
   name: material
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
-    - toc.integrate
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
     - navigation.top
+    - navigation.footer
+    - navigation.path
+    - toc.integrate
     - search.suggest
     - search.highlight
+    - search.share
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+    - content.tooltips
   language: en
   palette:
     - scheme: default
       toggle:
-        icon: material/toggle-switch-off-outline 
+        icon: material/toggle-switch-off-outline
         name: Switch to dark mode
       primary: teal
-      accent: purple 
-    - scheme: slate 
+      accent: purple
+    - scheme: slate
       toggle:
         icon: material/toggle-switch
-        name: Switch to light mode    
+        name: Switch to light mode
       primary: teal
       accent: lime
 
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/anw1998
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/
+      link: https://github.com/laurentletg
+      name: Lab GitHub
+
 nav:
-    - 'index.md'
-    - 'research.md'
-    - 'team.md'
-    - 'resources.md'
-    - 'contact.md'
+  - Home: index.md
+  - Research: research.md
+  - Team: team.md
+  - MS Lesion Segmentation:
+      - ms/index.md
+      - Segmentation Tools: ms/tools.md
+      - Public Datasets: ms/datasets.md
+  - Resources:
+      - resources/index.md
+      - Neuroradiology: resources/neuroradiology.md
+      - Python & Deep Learning: resources/python-dl.md
+      - 3D Slicer: resources/slicer.md
+      - HPC (Compute Canada): resources/hpc.md
+  - Onboarding: onboarding.md
+  - Contact: contact.md
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -52,20 +76,30 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.mark
+  - pymdownx.tabbed:
+      alternate_style: true
   - attr_list
   - md_in_html
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+  - glightbox
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+  - tags
+  - encryptcontent:
+      title_prefix: ''
+      summary: 'Please enter your password to access this wiki.'
+      placeholder: 'Enter password here'
+      encryption_info_message: ''
+      password_inventory:
+        staff:
+          - !ENV MKDOCS_PASSWORD
+      remember_password: true
 
 copyright: |
-  &copy; 2023 <a href="https://github.com/anw1998"  target="_blank" rel="noopener">An Ni Wu</a>
-plugins:
-    - encryptcontent:
-        title_prefix: ''
-        summary: 'Please enter your password to access this website.'
-        placeholder: 'Enter password here'
-        encryption_info_message: ''
-        use_secret: 'MKDOCS_PASSWORD'
-        remember_password: True
-        default_expire_delay: 1
+  &copy; 2025 Létourneau-Guillon Lab

@@ -1,8 +1,8 @@
-name: ci 
+name: ci
 on:
   push:
     branches:
-      - master 
+      - master
       - main
 permissions:
   contents: write
@@ -10,17 +10,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # needed for git-revision-date-localized
+      - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: pip install mkdocs-material
-      - run: pip install pillow cairosvg
-      - run: pip install mkdocs-encryptcontent-plugin
+      - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force
-        env: 
+        env:
           MKDOCS_PASSWORD: ${{ secrets.MKDOCS_PASSWORD }}
