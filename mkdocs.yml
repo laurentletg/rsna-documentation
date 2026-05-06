@@ -94,7 +94,7 @@ plugins:
   - encryptcontent:
       title_prefix: ''
       summary: 'Please enter your password to access this wiki.'
-      placeholder: 'Enter password here'
+      placeholder: 'Enter password here:'
       encryption_info_message: ''
       global_password: !ENV [MKDOCS_PASSWORD, '']
       remember_password: true
