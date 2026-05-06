@@ -96,9 +96,7 @@ plugins:
       summary: 'Please enter your password to access this wiki.'
       placeholder: 'Enter password here'
       encryption_info_message: ''
-      password_inventory:
-        staff:
-          - !ENV [MKDOCS_PASSWORD, '']
+      global_password: !ENV [MKDOCS_PASSWORD, '']
       remember_password: true
 
 copyright: |
