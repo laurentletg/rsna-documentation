@@ -2,46 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://anw1998.github.io/rsna-documentation/</loc>
-         <lastmod>2026-05-05</lastmod>
+         <lastmod>2026-05-06</lastmod>
     </url>
     <url>
          <loc>https://anw1998.github.io/rsna-documentation/contact/</loc>
-         <lastmod>2026-05-05</lastmod>
+         <lastmod>2026-05-06</lastmod>
     </url>
     <url>
          <loc>https://anw1998.github.io/rsna-documentation/onboarding/</loc>
-         <lastmod>2026-05-05</lastmod>
+         <lastmod>2026-05-06</lastmod>
     </url>
     <url>
          <loc>https://anw1998.github.io/rsna-documentation/research/</loc>
-         <lastmod>2026-05-05</lastmod>
+         <lastmod>2026-05-06</lastmod>
     </url>
     <url>
          <loc>https://anw1998.github.io/rsna-documentation/resources/</loc>
-         <lastmod>2026-05-05</lastmod>
+         <lastmod>2026-05-06</lastmod>
     </url>
     <url>
          <loc>https://anw1998.github.io/rsna-documentation/team/</loc>
-         <lastmod>2026-05-05</lastmod>
+         <lastmod>2026-05-06</lastmod>
+    </url>
+    <url>
+         <loc>https://anw1998.github.io/rsna-documentation/ms/</loc>
+         <lastmod>2026-05-06</lastmod>
+    </url>
+    <url>
+         <loc>https://anw1998.github.io/rsna-documentation/ms/datasets/</loc>
+         <lastmod>2026-05-06</lastmod>
+    </url>
+    <url>
+         <loc>https://anw1998.github.io/rsna-documentation/ms/tools/</loc>
+         <lastmod>2026-05-06</lastmod>
     </url>
     <url>
          <loc>https://anw1998.github.io/rsna-documentation/resources/</loc>
-         <lastmod>2026-05-05</lastmod>
+         <lastmod>2026-05-06</lastmod>
     </url>
     <url>
          <loc>https://anw1998.github.io/rsna-documentation/resources/hpc/</loc>
-         <lastmod>2026-05-05</lastmod>
+         <lastmod>2026-05-06</lastmod>
     </url>
     <url>
          <loc>https://anw1998.github.io/rsna-documentation/resources/neuroradiology/</loc>
-         <lastmod>2026-05-05</lastmod>
+         <lastmod>2026-05-06</lastmod>
     </url>
     <url>
          <loc>https://anw1998.github.io/rsna-documentation/resources/python-dl/</loc>
-         <lastmod>2026-05-05</lastmod>
+         <lastmod>2026-05-06</lastmod>
     </url>
     <url>
          <loc>https://anw1998.github.io/rsna-documentation/resources/slicer/</loc>
-         <lastmod>2026-05-05</lastmod>
+         <lastmod>2026-05-06</lastmod>
     </url>
 </urlset>
