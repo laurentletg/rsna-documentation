@@ -443,6 +443,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
   
 
       </a>
@@ -470,6 +477,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
   
 
       </a>
@@ -496,6 +510,13 @@
 
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
   
   
 
@@ -556,6 +577,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
   
 
             </a>
@@ -609,6 +637,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -626,6 +661,13 @@
 
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
   
   
 
@@ -814,6 +856,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
   
 
       </a>
@@ -880,6 +929,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
   
 
             </a>
@@ -924,6 +980,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
   
 
       </a>
@@ -951,6 +1014,13 @@
 
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
   
   
 
@@ -980,6 +1050,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
   
 
       </a>
@@ -1007,6 +1084,13 @@
 
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
   
   
 
@@ -1043,6 +1127,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
   
 
       </a>
@@ -1069,6 +1160,13 @@
 
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
   
   
 
@@ -1145,179 +1243,34 @@
   
 
 
-<h1 id="ms-lesion-segmentation-tools">MS Lesion Segmentation Tools</h1>
-<p>Overview of open-source models for automated white matter lesion segmentation in MS.</p>
-<hr>
-<h2 id="lst-lesion-segmentation-toolbox-classic">LST — Lesion Segmentation Toolbox (Classic)</h2>
-<p><strong>LST</strong> is a MATLAB/SPM12 toolbox for automated segmentation of T2-hyperintense white matter lesions, originally developed for MS.</p>
-<ul>
-<li><strong>Official site:</strong> <a href="https://www.applied-statistics.de/lst.html">applied-statistics.de/lst.html</a></li>
-<li><strong>Documentation (PDF):</strong> <a href="https://www.applied-statistics.de/LST_documentation.pdf">LST v3.0.0 manual</a></li>
-<li><strong>Requires:</strong> MATLAB + SPM12</li>
-</ul>
-<h3 id="installation">Installation</h3>
-<ol>
-<li>Download <code>LST_3.0.0.zip</code> from the <a href="https://www.applied-statistics.de/lst.html">official site</a></li>
-<li>Unzip into your SPM12 toolboxes folder: <code>&lt;SPM12_root&gt;/toolbox/LST/</code></li>
-<li>Open MATLAB → launch SPM12 → click <strong>Toolbox</strong> → select <strong>LST</strong></li>
-</ol>
-<h3 id="algorithms">Algorithms</h3>
-<table>
-<thead>
-<tr>
-<th>Algorithm</th>
-<th>Input</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>LGA</strong> (Lesion Growth Algorithm)</td>
-<td>FLAIR + T1</td>
-<td>Original algorithm (Schmidt et al. 2012)</td>
-</tr>
-<tr>
-<td><strong>LPA</strong> (Lesion Prediction Algorithm)</td>
-<td>FLAIR only</td>
-<td>Faster; good for large cohorts</td>
-</tr>
-<tr>
-<td><strong>Longitudinal</strong></td>
-<td>Longitudinal FLAIR ± T1</td>
-<td>For detecting new/enlarging lesions</td>
-</tr>
-</tbody>
-</table>
-<p>Additional tools: lesion filling, lesion probability maps, report generation.</p>
-<h3 id="key-papers">Key Papers</h3>
-<ul>
-<li>Schmidt et al. 2012 — LGA: <em>NeuroImage</em> 59(4):3774–3783</li>
-<li>Schmidt et al. 2019 — Longitudinal segmentation: see toolbox homepage</li>
-</ul>
-<hr>
-<h2 id="lst-ai-deep-learning-extension">LST-AI — Deep Learning Extension</h2>
-<p><strong>LST-AI</strong> is a fully open-source deep learning successor to classic LST, developed at TU Munich. It uses an <strong>ensemble of three 3D U-Nets</strong> with a composite loss (binary cross-entropy + Tversky) to address class imbalance between lesion and non-lesion tissue. It also labels lesion locations according to McDonald criteria automatically.</p>
-<ul>
-<li><strong>GitHub:</strong> <a href="https://github.com/CompImg/LST-AI">github.com/CompImg/LST-AI</a></li>
-<li><strong>Paper (NeuroImage: Clinical 2024):</strong> <a href="https://www.sciencedirect.com/science/article/pii/S2213158224000500">ScienceDirect</a> | <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11088188/">PMC full text</a></li>
-</ul>
-<p><strong>Performance:</strong> Dice &gt; 0.62 on MSSEG-1, outperforming classic LST, SAMSEG, and nnUNet.</p>
-<h3 id="installation_1">Installation</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Docker (recommended)</label><label for="__tabbed_1_2">pip (Linux)</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Pull image (CPU/GPU)</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>docker<span class="w"> </span>pull<span class="w"> </span>jqmcginnis/lst-ai
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Run (replace paths with absolute paths)</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span>-v<span class="w"> </span>/path/to/input:/input<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span>-v<span class="w"> </span>/path/to/output:/output<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span>jqmcginnis/lst-ai<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span>--t1<span class="w"> </span>/input/t1.nii.gz<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span>--flair<span class="w"> </span>/input/flair.nii.gz<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span>--output<span class="w"> </span>/output
-</code></pre></div>
+<div id="mkdocs-encrypted-content" style="display:none">I/YtFGq4qS11qS7JvbcRow==;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</div>
+<div id="mkdocs-decrypted-content" style="display:none">
+    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
+        <h1>Please enter your password to access this wiki.</h1>
+        
+        <input class="md-input" type="password" id="mkdocs-content-password" placeholder="Enter password here:">
+        
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Install HD-BET dependency first</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/MIC-DKFZ/HD-BET
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>HD-BET
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># Install LST-AI</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>pip<span class="w"> </span>install<span class="w"> </span>lst-ai
-</code></pre></div>
-</div>
-</div>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Platform support</p>
-<p>Native pip install is tested on <strong>Linux</strong> only. For macOS use Docker.</p>
-</div>
-<hr>
-<h2 id="flames-fully-lesion-aware-ms-segmentation">FLAMeS — Fully Lesion-Aware MS Segmentation</h2>
-<p><strong>FLAMeS</strong> is a robust deep learning model for automated MS lesion segmentation, designed to generalize across diverse MRI acquisition parameters and scanner types.</p>
-<ul>
-<li><strong>HuggingFace Space (interactive demo):</strong> <a href="https://huggingface.co/spaces/FrancescoLR/FLAMeS">huggingface.co/spaces/FrancescoLR/FLAMeS</a></li>
-<li><strong>Model weights:</strong> <a href="https://huggingface.co/FrancescoLR/FLAMeS-model">huggingface.co/FrancescoLR/FLAMeS-model</a></li>
-<li><strong>Paper (Journal of Neuroimaging, 2025):</strong> <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/jon.70085">Wiley</a> | <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12140514/">PMC full text</a></li>
-<li><strong>Authors:</strong> Dereskewicz E, La Rosa F, dos Santos Silva J, et al.</li>
-</ul>
-<h3 id="quick-start-via-huggingface-space">Quick Start via HuggingFace Space</h3>
-<p>The easiest way to try FLAMeS is the interactive web demo — no installation required:</p>
-<ol>
-<li>Go to <a href="https://huggingface.co/spaces/FrancescoLR/FLAMeS">huggingface.co/spaces/FrancescoLR/FLAMeS</a></li>
-<li>Upload your NIfTI file (T2/FLAIR brain MRI)</li>
-<li>Download the predicted lesion mask</li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">HuggingFace Zero GPU</p>
-<p>The Space runs on HuggingFace's free Zero GPU tier — it may take a minute to cold-start.</p>
-</div>
-<h3 id="citation">Citation</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nc">@article</span><span class="p">{</span><span class="nl">dereskewicz2025flames</span><span class="p">,</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="na">title</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="s">{FLAMeS: A robust deep learning model for automated multiple sclerosis lesion segmentation}</span><span class="p">,</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="na">author</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="s">{Dereskewicz, E and La Rosa, F and dos Santos Silva, J and others}</span><span class="p">,</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="na">journal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Journal of Neuroimaging}</span><span class="p">,</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="na">year</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">{2025}</span><span class="p">,</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="na">doi</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="s">{10.1111/jon.70085}</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
-</code></pre></div>
-<hr>
-<h2 id="comparison">Comparison</h2>
-<table>
-<thead>
-<tr>
-<th>Tool</th>
-<th>Input</th>
-<th>Platform</th>
-<th>DL</th>
-<th>Open source</th>
-<th>Best for</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>LST (LGA)</strong></td>
-<td>FLAIR + T1</td>
-<td>MATLAB/SPM</td>
-<td>No</td>
-<td>Yes</td>
-<td>Classic pipeline, SPM users</td>
-</tr>
-<tr>
-<td><strong>LST (LPA)</strong></td>
-<td>FLAIR only</td>
-<td>MATLAB/SPM</td>
-<td>No</td>
-<td>Yes</td>
-<td>Quick single-modality run</td>
-</tr>
-<tr>
-<td><strong>LST-AI</strong></td>
-<td>FLAIR + T1</td>
-<td>Linux / Docker</td>
-<td>Yes (U-Net)</td>
-<td>Yes</td>
-<td>Best accuracy, CLI/batch</td>
-</tr>
-<tr>
-<td><strong>FLAMeS</strong></td>
-<td>FLAIR</td>
-<td>Web / Python</td>
-<td>Yes</td>
-<td>Yes</td>
-<td>Quick demo, multi-site robustness</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="other-tools-for-reference">Other Tools (for reference)</h2>
-<ul>
-<li><a href="https://github.com/sergivalverde/cnn-ms-lesion-segmentation">CNN-MS Lesion Segmentation (Valverde)</a> — Early CNN-based approach</li>
-<li><a href="https://github.com/ivadomed/ms-challenge-2021">ivadomed / MICCAI 2021 MS challenge</a> — Framework used for new lesion detection</li>
-<li><a href="https://www.nature.com/articles/s41598-024-72649-9">Consensus comparison 2024 (Scientific Reports)</a> — Benchmark of multiple automated methods</li>
-</ul>
+
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "rsna-documentation/ms/tools/";
+var decryption_failure_message = "Invalid password.";
+var encryptcontent_keystore = ["VCj8lQDB/COhcdTzgNQaCw==;RKI2+oe4QSBJk1rmRHEMwF38oNd6+fq5Q/XmgSxuMqKIFRb1tWxWMeLez6FQ63IaFFdN7+omY4+Ru2DfF0+XuWK5akQALIwfJcL9dMgUzwroVY3ZxvP3k0zjs2W0Rf9m;AupkStF/riVuMEMOhbF75w=="];
+var encryptcontent_obfuscate = 0;
+
+const encryptcontent_event = new Event("encryptcontent_event");
+var encryptcontent_done = false;
+</script>
+<script type="module">
+if (!window.hasOwnProperty("init_decryptor")) {
+    import("../../assets/javascripts/decrypt-contents.js");
+} else {
+    init_decryptor();
+}
+</script>
 
 
 
